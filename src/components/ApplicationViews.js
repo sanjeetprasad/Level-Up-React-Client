@@ -5,6 +5,8 @@ import { GameProvider } from "./game/GameProvider.js"
 import { EventProvider} from "./game/EventProvider.js"
 import { EventList} from "./game/EventList.js"
 
+
+// sync a repository
 export const ApplicationViews = () => {
     return <>
         <main style={{
