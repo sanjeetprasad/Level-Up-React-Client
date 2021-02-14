@@ -1,8 +1,10 @@
 import React, { useContext, useEffect } from "react"
+import { useHistory } from 'react-router-dom'
 import { GameContext } from "./GameProvider.js"
 
-export const GameList = (props) => {
+export const GameList = () => {
     const { games, getGames } = useContext(GameContext)
+    const history = useHistory()
 
     useEffect(() => {
         getGames()
@@ -17,8 +19,11 @@ export const GameList = (props) => {
                         <div className="game__players">{game.number_of_players} players needed</div>
                         <div className="game__skillLevel">Skill level is {game.skill_level}</div>
                     </section>
-                })
-            }
+                })}
+                <button className="btn btn-2 btn-sep icon-create"
+                    onClick={() => history.push("/games/new")}>
+                            Register New Game
+                </button>
         </article>
     )
 }
