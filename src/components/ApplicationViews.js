@@ -4,6 +4,7 @@ import { GameList } from "./game/GameList.js"
 import { GameProvider } from "./game/GameProvider.js"
 import { EventProvider} from "./game/EventProvider.js"
 import { EventList} from "./game/EventList.js"
+import { GameForm } from "./game/GameForm.js"
 
 
 // sync a repository
@@ -18,6 +19,9 @@ export const ApplicationViews = () => {
                 <Route exact path="/">
                     <GameList />
                 </Route>
+                <Route exact path="/games/new">
+                    <GameForm />
+                </Route>
             </GameProvider>
 
             <EventProvider>
@@ -25,6 +29,8 @@ export const ApplicationViews = () => {
                     <EventList />
                 </Route>
             </EventProvider>
+
+         
         </main>
     </>
 }
