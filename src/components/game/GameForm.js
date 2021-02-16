@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react"
 import { GameContext } from "./GameProvider.js"
 import { useHistory } from 'react-router-dom'
+// import "../index.css"
 
 
 export const GameForm = () => {
