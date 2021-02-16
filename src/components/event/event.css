@@ -1,0 +1,14 @@
+.events {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.event {
+    background-color: lightyellow;
+    border: 2px solid brown;
+    padding: 2rem;
+    line-height: 2rem;
+    margin: 2px;
+}
